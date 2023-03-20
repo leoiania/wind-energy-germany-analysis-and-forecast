@@ -1,4 +1,7 @@
 pandas
 numpy
 seaborn
+statsmodels
+matplotlib
+scipy
 -e .
