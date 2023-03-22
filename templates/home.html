@@ -1,0 +1,29 @@
+<html>
+<body style="background-color:khaki;">
+<center>
+    <div class="login">
+       <h1><FONT COLOR=#050385>AR(3) model of Wind Energy in Germany </h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Select for how many days do you want to forecast </legend>
+        </h1>
+		<h2>
+		(the last day of training is 20th of December, 2019)
+		</h2>
+        <div class="mb-3">
+            <label class="form-label">How many days of forecast do you want?</label>
+            <input class="form-control" type="number" name="forecast_days"
+                placeholder="" min='0' max='730' />
+        </div>
+        
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict wind energy generation" required />
+        </div>
+    </form>
+    <h2>
+       The predicted values are: {{results}}
+    </h2>
+</center>
+   <body>
+</html>
