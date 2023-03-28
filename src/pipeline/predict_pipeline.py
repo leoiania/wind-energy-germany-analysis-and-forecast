@@ -29,10 +29,3 @@ class CustomData:
             return int(self.forecast_days)
         except Exception as e:
             raise CustomException(e, sys)
-
-
-if __name__ == '__main__':
-    ogg = PredictPipeline()
-    uno = ogg.predict(days=4)
-    due = [i for i in uno]
-    
